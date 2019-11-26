@@ -5,9 +5,12 @@ namespace GreatQuotes
 {    
     public partial class QuoteDetailPage : ContentPage
     {
-        public QuoteDetailPage(QuoteViewModel quote)
+        public QuoteDetailPage()
         {
-            BindingContext = quote;
+            BindingContext = App.MainViewModel.SelectedQuote;
+
+            App.MainViewModel.SelectedQuote = null;
+
             InitializeComponent ();
         }
     }

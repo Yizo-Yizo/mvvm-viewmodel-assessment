@@ -8,13 +8,8 @@ namespace GreatQuotes
         public QuoteListPage()
         {
             BindingContext = App.MainViewModel;
+            
             InitializeComponent();
-        }
-
-        void OnQuoteSelected(object sender, ItemTappedEventArgs e)
-        {
-            QuoteViewModel quote = (QuoteViewModel)e.Item;
-            Navigation.PushAsync(new QuoteDetailPage(quote), true);
         }
     }
 }
